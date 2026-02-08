@@ -2,14 +2,16 @@
 # This will be a logical based programming, just data isn't a priority right now.
 
 def user_input(): # Why should I use the input function when I can just make my own instead?
-    choice = int(input("Choose number: ")) 
-    return choice
+    try:    
+        return int(input("Choose number: ")) 
+    except ValueError:
+        return -1
 
 # Lets move on to other definitions, which will become useful over time.
 
 def show_menu():
     print("╔══════════════════════╗")
-    print("║ AdviceTUI 0.1.0 DEMO ║")
+    print("║ AdviceTUI 0.1.1 DEMO ║")
     print("╚══════════════════════╝")
     print("     ")
     print("『 OPTIONS 』")
@@ -50,31 +52,91 @@ def show_submenu():
 # This is where the real, true actuall program begins actually
 
 while True:
-    show_submenu()
+    show_menu()
     prompt = user_input()
 
-    if prompt == "1":
-        print("Advice Revision 1")
-        print("════════════════════════════")
-        print("     ")
-        print("In order to start programming, you need one or two things:")
-        print("One you can start by picking a programming language,")
-        print("In beginners land, you can start learning Python first.")
-        print("In also beginners land, but not so simple, is C programming language.")
-        print("But I recommend Python as your first language for now, until you have a solid,")
-        print("grasp of the programming language itself, that is by mastering it.")
-        print("     ")
-        print("However, if you want to challenge yourself, start with C.")
-        print("Why Python? Because its the first beginners choice.")
-        print("Why C? Because you will also learn other languages like Rust, Go, etc.")
-        print("     ")
-        print("Or two, start by studying or learning Computer science and Data Structure & Algerithms.")
-        print("Why? Because you will later understand and get a solid grasp of computers and later algerithms.")
-        print("1. You will understand a little bit about computers, and later with C you will learn a lot about computers.")
-        print("2. By making an algerithm, you make a personalized feed for yourself and anybody else around, that is the typicallization of what it seems like.")
-        print("     ")
-        print("Final Verdict: Learn Python first as your choice, then later down the line learn computer science and algerithms, and especially data structure as well.")
-        print("     ")
-        print("════════════════════════════")
-        print("     ")
+    if prompt == 1:
+
+        show_submenu()
+        prompt = user_input()
+
+        if prompt == 1:
+
+            print("Advice Revision 1")
+            print("════════════════════════════")
+            print("     ")
+            print("In order to start programming, you need one or two things:")
+            print("One you can start by picking a programming language,")
+            print("In beginners land, you can start learning Python first.")
+            print("In also beginners land, but not so simple, is C programming language.")
+            print("But I recommend Python as your first language for now, until you have a solid,")
+            print("grasp of the programming language itself, that is by mastering it.")
+            print("     ")
+            print("However, if you want to challenge yourself, start with C.")
+            print("Why Python? Because its the first beginners choice.")
+            print("Why C? Because you will also learn other languages like Rust, Go, etc.")
+            print("     ")
+            print("Or two, start by studying or learning Computer science and Data Structure & Algerithms.")
+            print("Why? Because you will later understand and get a solid grasp of computers and later algerithms.")
+            print("1. You will understand a little bit about computers, and later with C you will learn a lot about computers.")
+            print("2. By making an algerithm, you make a personalized feed for yourself and anybody else around, that is the typicallization of what it seems like.")
+            print("     ")
+            print("Final Verdict: Learn Python first as your choice, then later down the line learn computer science and algerithms, and especially data structure as well.")
+            print("     ")
+            print("════════════════════════════")
+            print("     ")
+            break
+
+        elif prompt == 2:
+            pass
+
+        elif prompt == 3:
+            pass
+
+        elif prompt == 4:
+            pass
+        
+        elif prompt == 5:
+            pass
+
+        elif prompt == 6:
+            pass
+
+        elif prompt == 7:
+            pass
+
+        elif prompt == 8:
+            pass
+
+        elif prompt == 9:
+            pass
+
+        else:
+            print("Invalid operation...")
+            print("Actually wanna 1) quit or 2) continue?")
+            prompt = user_input()
+
+            if prompt == 1:
+                break
+
+            elif prompt == 2:
+                continue
+            
+            else:
+                print("Yeah idc dude I will quit...")
+                break
+
+    elif prompt == 2:
+
+        show_faq()
+        continue
+
+    elif prompt == 3:
+
+        print("Exiting program...")
         break
+
+    else:
+        
+        print("Invalid operation...")
+        continue
